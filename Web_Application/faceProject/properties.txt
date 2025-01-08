@@ -3,7 +3,7 @@ password: admin@1234
 
 
 firebaseConfig = {
-    apiKey: "AIzaSyALi7IRYqBWEWd3XgfS1GJMzMHQxWkdPZg",
+    apiKey: "API Key",
     authDomain: "faceproject-cd0b0.firebaseapp.com",
     databaseURL: "https://faceproject-cd0b0.firebaseio.com",
     projectId: "faceproject-cd0b0",
