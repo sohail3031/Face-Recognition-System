@@ -1,0 +1,37 @@
+<resources>
+
+<!--    <string name="app_name">Display Notification Android</string>-->
+    <string name="app_name">Face Recognition System</string>
+    <string name="password_strength_weak">Weak</string>
+    <string name="password_strength_medium">Medium</string>
+    <string name="password_strength_strong">Strong</string>
+    <string name="password_strength_very_strong">Very Strong</string>
+    <string name="title_activity_demo">Demo</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <!--    <string name="weak" />-->
+
+    <!-- Onboard Screen Titles -->
+    <string name="first_title">Welcome To Face Recognition System</string>
+    <string name="second_title">Receive Notifications</string>
+    <string name="third_title">Check Previous Notifications</string>
+    <string name="fourth_title">Chat With Your Friends</string>
+
+    <!-- Onboard Screen Description -->
+    <string name="first_desc">Welcome to Facial Recognition System Application</string>
+    <string name="second_desc">You can receive notifications when you are either online or offline</string>
+    <string name="third_desc">All the notifications that are received by the application is stored in the list for the user for future use</string>
+    <string name="fourth_desc">You can send messages to your friends/coulees who has this application</string>
+
+</resources>

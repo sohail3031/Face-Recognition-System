@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<title>Login V1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+	<style>
+		.choice1, .choice2{
+			background: linear-gradient(-135deg, #c850c0, #4158d0);
+			width: 290px;
+			height: 50px;
+			border-radius: 10px;
+			padding:10px;
+			color: white;
+		}
+		.choice1:hover, .choice2:hover{
+		background: black;
+		color:white;
+		}
+	</style>
+</head>
+<body >
+	<div class="limiter">
+		<div class="container-login100">
+			<header>
+				<h1>Please Select Designation:</h1>
+			</header>
+			<div class="wrap-login100 pb-5">
+				<form class="login100-form validate-form" method="post" action="{% url 'check' %}">
+					{% csrf_token %}
+					<div class="radio">
+					  <label class="choice1"><input type="radio" checked value="employee" name = "choice"> As Employee</label>
+					</div>
+					<div class="radio">
+					  <label class="choice2"><input type="radio" value="admin" name = "choice">   As System Admin</label>
+					</div>
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Login
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

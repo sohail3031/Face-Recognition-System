@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    {% if message %}
+    <script> alert('{{message}}');</script>
+    {% endif %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/styles.css' %}" >
+</head>
+<body class="container my-2" >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+		  <div class="collapse navbar-collapse d-flex px-4 " id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="{% url 'indexView' %}">Home</a></button>
+			   </div>
+                <div class="dropdown">
+                  <button class="dropbtn"><a href="{% url 'indexView' %}">Worker</a></button>
+                  <div class="dropdown-content">
+                    <a href="{% url 'addWorkerByEmployee' %}">Add Worker</a>
+                    <a href="{% url 'editWorkerByEmployee' %}">Edit Worker</a>
+                    <a href="{% url 'displayWorkerListByEmployee' %}">Display All</a>
+                  </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="{% url 'addFraudDataByEmployee' %}">Add Data</a></button>
+                </div>
+                <div class="dropdown">
+                     <button class="dropbtn"><a href="{% url 'displayView' %}">Display List</a></button>
+                </div>
+				<div class="dropdown">
+				  <button class="dropbtn"><a href="{% url 'logOutView' %}">LogOut</a></button>
+			   </div>
+			</ul>
+		  </div>
+    	</nav>
+    <div id="imageWrapper" style="background-image: url({% static 'images/bg1.jpg' %});">
+		<header>
+			<h1>Employee Panel<br>Add Fraud Person Data Here</h1>
+		</header>
+        <div id="beforeForm" style="background-image: url({% static 'images/bg1.jpg' %});">
+        <section class="content">
+            <form method = "post" enctype="multipart/form-data"  class="imageForm my-4" action="{% url 'addFraudDataByEmployee' %}">
+
+                {% if id %}
+                <input type="number" value="{{ id }}" hidden>
+                {% endif %}
+                {% csrf_token %}
+                <label for="name_id" class="label text-white">Name: </label>
+                <input type="text" name="name" id="name_id" placeholder="Name of the Fraud person" value="Name"><br><br>
+                <label for="image_id" class="label text-white">Image: </label>
+                <input type="file" name="image" id="image_id" placeholder="Name of the Fraud person"><br><br>
+                <label for="description_id" class="label text-white mb-2">Description</label>
+                <textarea  rows="4" cols="50" id="description_id" name="description"class="descriptionClass form-control" ></textarea><br><br>
+                <label for="loss_id" class="label text-white">Loss</label>
+                <input type="number" name="loss" id="loss_id" placeholder="Enter the Loss in Rupees" value="1000"><br><br>
+                <input type="submit" value="Upload" class="upload btn btn-primary" name="submitImage"  >
+            </form>
+        </section>
+        </div>
+    </div>
+    {% if url %}
+    <p>Uploaded File: <a href="{{ url }}">{{ url }}</a></p>
+    {% endif %}
+</body>
+<script>
+
+</script>
+</html>

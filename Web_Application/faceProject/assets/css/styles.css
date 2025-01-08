@@ -1,0 +1,518 @@
+
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url('../fonts/montserrat/Montserrat-Bold.ttf');
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	line-height: 1;
+}
+
+body, html {
+	height: 100%;
+	font-family: Poppins-Regular, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  font-weight: normal;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote {
+  quotes: none;
+}
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a img {
+  border: none;
+}
+
+body{
+margin:0;
+padding: 0;
+font-family: 'Source Sans Pro', sans-serif;
+}
+#wrapper{
+float:left;
+width: 100%;
+margin:0;
+padding: 0;
+background-image: url(../img/sf.png);
+background-size: cover;
+background-repeat: no-repeat;
+}
+#imageWrapper{
+float:left;
+width: 100%;
+height:90%;
+background-image: url('images/bg1.jpg');
+//-webkit-filter: blur(2px);
+position: relative;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+header{float: left;
+width: 100%;
+text-align: center;
+background-color: rgba(0,0,0,0.5);
+}
+header h1{
+color:#fff;
+padding: 20px 0;
+}
+header h1 a{
+text-decoration: none;
+color: #2196F3;
+}
+.content{
+float:left;
+width: 100%;
+}
+
+.myform1, .myform2, .imageForm{
+max-width: 500px;
+width: 100%;
+margin:30px auto;
+padding: 30px;
+background-color: rgba(0,0,0,0.5);
+border-radius: 5px;
+display: table;
+}
+.myform1 h1, .myform2 h1, .imageForm h1{
+float:left;
+width: 100%;
+text-align: center;
+padding: 20px 0;
+color:#fff;
+}
+.myform1 input[type="email"], .myform2 input, .imageForm input, .myform1 input[type="password"]{
+float: left;
+width: calc(100% - 20px);
+padding:10px;
+border:none;
+outline:none;
+border-radius: 3px;
+ margin:10px 0;
+ }
+.imageForm input[type="file"]{
+text:red;
+background:white;
+}
+.terms{
+position: relative;
+width:100%;
+display: inline-block;
+margin:10px 0;
+}
+.terms input{
+display: none;
+}
+.terms label{
+float: left;
+line-height: 1.4;
+color: #fff;
+}
+.terms label::before{
+width: 20px;
+height: 20px;
+border: 1px solid #2196F3;
+content: '';
+border-radius: 10px;
+float: left;
+cursor: pointer;
+margin-right: 10px;
+}
+.terms input[type=checkbox]:checked + label::after{
+display: block;
+}
+.terms label::after{
+display: none;
+top: 6px;
+left: 6px;
+content: '';
+color: #2196F3;
+position: absolute;
+width: 10px;
+height: 10px;
+background-color: #2196F3;
+border-radius: 5px;
+cursor: pointer;
+}
+
+
+.myform1 input[type="submit"], imageForm{
+float: left;
+cursor: pointer;
+width: 95%;
+padding:10px;
+border:none;
+outline:none;
+border-radius: 3px;
+margin:10px 0;
+background-color: #4CAF50;
+color: #fff;
+}
+ul li a:hover{
+        background: #343a40;
+        color:white;
+        border-radius: 5px;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+        }
+
+.media_signup{
+float:left;
+width: 100%;
+}
+.media_header{
+float:left;
+width: 100%;
+margin:20px 0;
+}
+.line_left{
+width: 20%;
+border-bottom: 1px solid #fff;
+float: left;
+margin-top: 10px;
+}
+.media_header h3{
+width: 60%;
+text-align: center;
+color:#fff;
+clear: none;
+display: inline;
+float: left;
+}
+.line_right{
+width: 20%;
+border-bottom: 1px solid #fff;
+float:right;
+margin-top: 10px;
+}
+
+.social{
+float:left;
+width: 100%;
+margin:20px 0;
+}
+.social ul{
+float:left;
+width: 100%;
+}
+.social ul li{
+list-style: none;
+display: inline;
+}
+.social ul li a{
+float:left;
+padding: 10px 10px;
+width: calc(33.3% - 40px);
+margin: 0 10px;
+text-align: center;
+text-decoration: none;
+color:#fff;
+border-radius: 3px;
+}
+.facebook{
+background-color: #4464b2;
+}
+.twitter{
+background-color: #28a9e0;
+}
+.google{
+background-color: #da4735;
+}
+
+.have_account{
+float:left;
+width: 100%;
+text-align: center;
+color:#fff;
+margin:20px 0;
+}
+.have_account a{
+text-decoration: none;
+color:#bbbbbb;
+font-weight: bold;
+padding-left: 10px;
+}
+a:hover {text-decoration: underline;}
+.descriptionClass{
+width: 95%;
+}
+/*.btnClass{
+position:absolute;
+}*/
+.imageWrapper{
+position:relative;
+}
+
+#mybtn{
+position:absolute;
+top:40%;
+left:35%;
+transition-timing-function: ease-out;
+transition-delay: 20s;
+transition: width 50s, height 50s, transform 10s;
+}
+#mybtn:hover{
+height: 50px;
+width:200px;
+transition-delay: 20s;
+transition-delay: 20s;
+}
+.displaySection{
+display: flex;
+border: 1px solid black;
+border-radius: 5px;
+}
+.displaySectionChild{
+width: 50%;
+height: 320px;
+}
+.imageSection img {
+width:100%;
+height:100%;
+padding: 15px;
+}
+.imageSection{
+margin: 15px 15px;
+border: 2px solid #593f02;
+border-radius: 10px;
+}
+.desSection{
+display:flex;
+flex-direction:column;
+align-items: center;
+height:350px;
+flex: 20% 60% 20%;
+}
+.desSectionChild {
+width:95%;
+flex:1 2 1 1;
+padding:10px;
+}
+.desSection .desc {
+width:100%;
+}
+.buttons{
+width:100%;
+}
+.desSectionChild label{
+margin : 5px;
+}
+.descriptionClass{
+height:50px;
+}
+
+button {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+  background : red;
+}
+
+.container-login100 {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #9053c7;
+  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+.wrap-login100 {
+  width: 960px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 177px 130px 33px 95px;
+}
+
+.login100-form {
+  width: 290px;
+}
+
+.container-login100-form-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.login100-form-btn {
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  background: #57b846;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn:hover {
+  background: #333333;
+}
+
+@media (max-width: 992px) {
+  .wrap-login100 {
+    padding: 177px 90px 33px 85px;
+  }
+
+  .login100-pic {
+    width: 35%;
+  }
+
+  .login100-form {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap-login100 {
+    padding: 100px 80px 33px 80px;
+  }
+
+  .login100-pic {
+    display: none;
+  }
+
+  .login100-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .wrap-login100 {
+    padding: 100px 15px 33px 15px;
+  }
+}
+ /* Dropdown Button */
+.dropbtn {
+  background-color:#17a2b8;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+}
+
+.login100-pic {
+  width: 316px;
+}
+
+.login100-pic img {
+  max-width: 100%;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #17a2b8;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+   color:white;
+    border-radius: 5px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background: #343a40;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background: #343a40;}
+
+

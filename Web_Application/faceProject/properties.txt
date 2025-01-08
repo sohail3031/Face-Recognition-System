@@ -1,0 +1,16 @@
+email: amairsohailproject2020@gmail.com
+password: admin@1234
+
+
+firebaseConfig = {
+    apiKey: "AIzaSyALi7IRYqBWEWd3XgfS1GJMzMHQxWkdPZg",
+    authDomain: "faceproject-cd0b0.firebaseapp.com",
+    databaseURL: "https://faceproject-cd0b0.firebaseio.com",
+    projectId: "faceproject-cd0b0",
+    storageBucket: "faceproject-cd0b0.appspot.com",
+    messagingSenderId: "191793035345",
+    appId: "1:191793035345:web:9fcc7ff278dd1ca923e070"
+  };
+
+
+configure accordingly!!

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="#3366cc">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#fff"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintTextColor="#fff"
+        app:boxStrokeColor="#fff"
+        app:boxStrokeWidthFocused="2dp"
+        app:startIconTint="#fff">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialogSMS"
+            android:hint="Enter Your Message"
+            android:layout_marginTop="16dp"
+            android:textColor="#ffffff"
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:textColorHint="#ffffff"
+            android:padding="16dp"
+            android:background="#6699ff"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>

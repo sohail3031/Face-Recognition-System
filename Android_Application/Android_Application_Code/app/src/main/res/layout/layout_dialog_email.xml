@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="#3366cc">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#fff"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintTextColor="#fff"
+        app:boxStrokeColor="#fff"
+        app:boxStrokeWidthFocused="2dp"
+        app:startIconTint="#fff">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toEmailAddress"
+            android:hint="To Address"
+            android:textColor="#ffffff"
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:textColorHint="#ffffff"
+            android:padding="16dp"
+            android:background="#6699ff"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#fff"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintTextColor="#fff"
+        app:boxStrokeColor="#fff"
+        app:boxStrokeWidthFocused="2dp"
+        app:startIconTint="#fff">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/subjectEmail"
+            android:hint="Subject"
+            android:layout_marginTop="16dp"
+            android:textColor="#ffffff"
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:textColorHint="#ffffff"
+            android:padding="16dp"
+            android:background="#6699ff"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/firstNameTextInputAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#fff"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:hintTextColor="#fff"
+        app:boxStrokeColor="#fff"
+        app:boxStrokeWidthFocused="2dp"
+        app:startIconTint="#fff">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/messageEmail"
+            android:hint="Message"
+            android:layout_marginTop="16dp"
+            android:lines="10"
+            android:textColor="#ffffff"
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:textColorHint="#ffffff"
+            android:padding="16dp"
+            android:background="#6699ff"
+            android:textAlignment="textStart" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

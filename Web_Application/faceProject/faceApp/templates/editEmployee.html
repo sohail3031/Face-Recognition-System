@@ -1,0 +1,188 @@
+<html>
+<head>
+	{% load static %}
+	{% if  message  %}
+	<script type="text/javascript" language="javascript">
+		alert("{{message}}");
+	</script>
+	{% endif %}
+	<title>Sign In Form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+	<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<style>
+		.content{
+		display: flex;
+		justify-content: center;
+		}
+		.displayForm{
+		min-width: 500px;
+		min-height: 300px;
+		}
+		label{
+		color:white;
+		}
+		.displaySectionForm{
+		min-width: 600px;
+		min-height: 450px;
+		}
+		.desSection .desSectionChild {
+		min-width: 500px;
+		margin-left : 250px;
+		}
+		#emailID label, #emailID input, #buttons{
+		margin-left: 115px;
+		}
+	</style>
+</head>
+<body class="container my-2">
+	<div id="wrapper" style="background-image: url({% static 'images/bg0.jpg' %});">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+		  <div class="collapse navbar-collapse d-flex px-4 " id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+			   <div class="dropdown">
+				  <button class="dropbtn"><a href="{% url 'adminHomePage' %}">Employee</a></button>
+				  <div class="dropdown-content">
+					<a href="{% url 'signUpView' %}">Add Employee</a>
+					<a href="{% url 'editEmployee' %}">Edit Employee</a>
+					<a href="{% url 'displayAllEmployees' %}">Display All</a>
+				  </div>
+			   </div>
+				<div class="dropdown">
+              <button class="dropbtn"><a href="{% url 'adminHomePage' %}">Worker</a></button>
+              <div class="dropdown-content">
+                <a href="{% url 'addWorkerByAdmin' %}">Add Worker</a>
+                <a href="{% url 'editWorkerByAdmin' %}">Edit Worker</a>
+                <a href="{% url 'displayWorkerListByAdmin' %}">Display All</a>
+              </div>
+           </div>
+          <div class="dropdown">
+              <button class="dropbtn"><a href="{% url 'adminHomePage' %}">Fraud Person</a></button>
+              <div class="dropdown-content">
+                <a href="{% url 'addFraudDataByAdmin' %}">Add Fraud Person</a>
+                <a href="{% url 'displayFraudPersonListByAdmin' %}">Display All</a>
+              </div>
+           </div>
+				<div class="dropdown">
+				  <button class="dropbtn"><a href="{% url 'logOutAdmin' %}">LogOut</a></button>
+				  <div class="dropdown-content">
+				  </div>
+			   </div>
+			</ul>
+			  <form class="navbar-form navbar-left" action="{% url 'searchByEmail' %}" method="post">
+				  {% csrf_token %}
+				  <div class="input-group">
+					<input type="email" class="form-control" placeholder="Search by Email" name="searchEmail">
+					<div class="input-group-btn">
+					  <button class="btn btn-default go" type="submit">GO
+						<i class="glyphicon glyphicon-search"></i>
+					  </button>
+					</div>
+				  </div>
+			</form>
+		  </div>
+   		</nav>
+		<header>
+			<h1>Admin Panel<br>Edit Employees Details Here, Search him with his Email ID</h1>
+		</header>
+		<section class="content mybtn">
+               {% for  emp in dict.employee %}
+                    {% if emp %}
+                        <form class="displayForm" method="post" action="{% url 'updateByAdmin' %}" >
+                            {% csrf_token %}
+                            <div class="displaySection  displaySectionForm my-4">
+                                <div class="displaySectionChild desSection my-2">
+                                    <div class="desSectionChild ">
+                                        <label for="name">Employee Id:</label>
+                                        <input type="text" id="name" value="{{ emp.empid }} " name="empid" class="form-control editable" disabled>
+                                    </div>
+                                    <div class="desSectionChild desc ml-4" id="emailID">
+                                        <label for="email">Email:</label>
+                                        <input type="text" id="email" value="{{ emp.email }} " name="email" class="form-control editable" disabled>
+                                    </div>
+                                    <div class="desSectionChild ">
+                                        <label for="mobile">Mobile Number: </label>
+                                        <input type="Number" id="mobile" name="mobileNumber" value="{{ emp.mobileNumber }}" class="form-control editable" disabled>
+                                    </div>
+									<div class="desSectionChild ">
+                                        <label for="date">Date:</label>
+                                        <input type="text" id="date" name="date" value="{{ emp.date }}" class="form-control editable" disabled>
+                                    </div>
+                                    <div class="buttons my-3 d-flex justify-content-around" id="buttons">
+                                        <input type="number" name="count" value="{{ count }}" hidden>
+                                        <input type="submit" value="Delete" class=" btn btn-primary delete" id="delete" name="deleteEdit" >
+                                        <input type="submit" name="saveEdit" value="Save" class=" btn btn-primary save" hidden>
+                                        <input type="button" value="Modify" class=" btn btn-primary modify" id="submit">
+                                        <input type="number" name="id" value="{{ emp.customId }}" hidden >
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    {% endif %}
+                {% endfor %}
+            </section>
+		</div>
+
+</body>
+<script>
+        $(document).ready(function() {
+            $('.modify').click(function() {
+                var hidden_fields = $(this).siblings('input:hidden');
+                console.log(hidden_fields)
+                console.log("Hidden value: "+hidden_fields.val());
+                var x = parseInt(0);
+                var id = $(this).next('input:hidden');
+                id = parseInt(id.val());
+                console.log("id: "+id);
+                var value = 0;
+                if( x > 0){ value = parseInt(x) * parseInt(4); }
+                var allFields = document.getElementsByClassName("editable")
+                for(var i=value; i<=parseInt(value+3); i++){
+                   allFields[i].disabled = false;
+                }
+                $(this).prop("type", "hidden");
+                $(this).prev('input:hidden').removeAttr("hidden");
+             });
+        });
+
+        $(document).ready(function() {
+            $('.delete').click(function() {
+                var hidden_fields = $(this).siblings('input:hidden');
+                console.log("Hidden value: "+hidden_fields.val());
+                var x = parseInt(hidden_fields.val());
+                var id = $(this).next('input:hidden');
+                id = parseInt(id.val());
+                console.log("id: "+id);
+                var value = 0;
+                if( x > 0){ value = parseInt(x) * parseInt(4); }
+                var allFields = document.getElementsByClassName("editable")
+                for(var i=value; i<=parseInt(value+3); i++){
+                   allFields[i].disabled = false;
+                }
+             });
+        });
+    </script>
+	{% if dict.message %}
+	<script>alert('{{dict.message}}');</script>
+	{% endif%}
+</html>

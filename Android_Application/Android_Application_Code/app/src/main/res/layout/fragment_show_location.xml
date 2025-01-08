@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#3366cc">
+
+<!--    <fragment-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/map"-->
+<!--        android:name="com.google.android.gms.maps.SupportMapFragment"/>-->
+<!--    com.google.android.gms.maps.MapView-->
+    <com.google.android.gms.maps.MapView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mapView"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:elevation="10dp"
+        android:background="#6699ff"
+        android:id="@+id/searchBoxRelative">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:id="@+id/searchImage"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/search_icon_white"/>
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/searchImage"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:id="@+id/sreachBar"
+            android:background="@null"
+            android:hint="Search here"
+            android:textColorHint="#ffffff"
+            android:imeOptions="actionSearch"
+            android:layout_marginLeft="10dp"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="60dp"
+        android:background="#3366cc"
+        android:id="@+id/imageCard"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/searchBoxRelative"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            android:id="@+id/gps_Id"
+            android:src="@drawable/gps_icon"
+            android:layout_marginRight="5dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="60dp"
+        android:background="#3366cc"
+        android:id="@+id/mapColorOptions"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/imageCard"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            android:id="@+id/color_menu"
+            android:src="@drawable/color_menu"
+            android:layout_margin="-30dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_below="@+id/mapColorOptions"-->
+<!--        android:visibility="gone">-->
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="125dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_margin="10dp"-->
+<!--            app:cardBackgroundColor="#f0fff0"-->
+<!--            app:cardElevation="10dp">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:padding="5dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/userTypeAccount"-->
+<!--                    android:text="Login As: "-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:fontFamily="serif"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="#000"/>-->
+
+<!--            </RelativeLayout>-->
+
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="125dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_margin="10dp"-->
+<!--            app:cardBackgroundColor="#f0fff0"-->
+<!--            app:cardElevation="10dp">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:padding="5dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/userTypeAccountInfo"-->
+<!--                    android:text="Unknown"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:fontFamily="serif"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="#000"/>-->
+
+<!--            </RelativeLayout>-->
+
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+<!--    </LinearLayout>-->
+
+</RelativeLayout>
