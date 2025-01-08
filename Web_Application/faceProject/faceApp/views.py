@@ -16,7 +16,7 @@ from faceApp.models import Worker
 
 #
 # config = {
-#     "apiKey": "AIzaSyBZW6s2OKHfWNookokwS7bB4o1Ez1gy3qU",
+#     "apiKey": "API Key",
 #     "authDomain": "face-recognition-system-57594.firebaseapp.com",
 #     "databaseURL": "https://face-recognition-system-57594.firebaseio.com",
 #     "projectId": "face-recognition-system-57594",
@@ -26,7 +26,7 @@ from faceApp.models import Worker
 #     "measurementId": "G-QMC8S8ZKJH"
 # }
 config = {
-    "apiKey": "AIzaSyBZW6s2OKHfWNookokwS7bB4o1Ez1gy3qU",
+    "apiKey": "API Key",
     "authDomain": "face-recognition-system-57594.firebaseapp.com",
     "databaseURL": "https://face-recognition-system-57594.firebaseio.com",
     "projectId": "face-recognition-system-57594",
