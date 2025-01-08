@@ -2,7 +2,7 @@
 <resources>
 
     <string name="map_key" translatable="false">
-        AIzaSyDSGSxkN_HUW1nVXgtja5lFMei54WXSUy8
+        API Key
     </string>
 
 </resources>
